@@ -1,27 +1,39 @@
-import java.util.Scanner;
+import Factories.ShapeFactory;
+import Shapes.Interfaces.Shape;
 
 public class Main {
     public static void main(String[] args) {
 
-        MyClass firstClass = new MyClass();
-        firstClass.run();
+//        MyClass firstClass = new MyClass();
+//        firstClass.run();
+//
+//          Scanner myScanner = new Scanner(System.in);
+//        String a,b;
+//        System.out.println("Enter a word:");
+//        a = myScanner.next();
+//
+//        System.out.println("Enter another word:");
+//        b = myScanner.next();
+//
+//        System.out.println(firstClass.AddStrings(a,b));
+//
+//        MySecondClass secondClass1 = new MySecondClass(1);
+//        MySecondClass secondClass2 = new MySecondClass(2,3);
+//        MySecondClass secondClass3 = new MySecondClass(4,5);
+//        MySecondClass secondClass4 = new MySecondClass(6);
+//
+//        System.out.println("Enter a number:");
+//        System.out.println(MySecondClass.DoubleMe(myScanner.nextInt()));
 
-          Scanner myScanner = new Scanner(System.in);
-        String a,b;
-        System.out.println("Enter a word:");
-        a = myScanner.next();
+        ShapeFactory shapeFactory = new ShapeFactory();
 
-        System.out.println("Enter another word:");
-        b = myScanner.next();
+        Shape shape1 = shapeFactory.getShape("CIRCLE");
+        shape1.Draw();
 
-        System.out.println(firstClass.AddStrings(a,b));
+        Shape shape2 = shapeFactory.getShape("TRIANGLE");
+        shape2.Draw();
 
-        MySecondClass secondClass1 = new MySecondClass(1);
-        MySecondClass secondClass2 = new MySecondClass(2,3);
-        MySecondClass secondClass3 = new MySecondClass(4,5);
-        MySecondClass secondClass4 = new MySecondClass(6);
-
-        System.out.println("Enter a number:");
-        System.out.println(MySecondClass.DoubleMe(myScanner.nextInt()));
+        Shape shape3 = shapeFactory.getShape("SQUARE");
+        shape3.Draw();
     }
 }
