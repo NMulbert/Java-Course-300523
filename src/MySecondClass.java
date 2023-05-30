@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class MySecondClass {
     public MySecondClass(int a) {
         System.out.println("My parameter is: " + a);
